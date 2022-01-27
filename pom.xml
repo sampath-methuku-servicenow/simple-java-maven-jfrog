@@ -83,6 +83,10 @@
                             <repoKey>default-maven-local</repoKey>
                             <snapshotRepoKey>default-maven-local</snapshotRepoKey>
                         </publisher>
+                      <buildInfo>
+              <buildNumber>{{DRONE_BUILD_NUMBER|TRAVIS_BUILD_NUMBER|CI_BUILD_NUMBER|BUILD_NUMBER|"333"}}</buildNumber>
+             <buildUrl>{{DRONE_BUILD_URL|CI_BUILD_URL|BUILD_URL}}</buildUrl>
+            </buildInfo>
                     </configuration>
                 </execution>
             </executions>
